@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import './globals.css'; // Adjust based on the file's location.
 
 export default function Page() {
   const [timeLeft, setTimeLeft] = useState(5); // 5-second countdown
