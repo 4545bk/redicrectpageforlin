@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import './globals.css'; // Adjust based on the file's location.
 
 export default function Page() {
-  const [timeLeft, setTimeLeft] = useState(5); // 5-second countdown
+  const [timeLeft, setTimeLeft] = useState(2); // 5-second countdown
 
   useEffect(() => {
     if (timeLeft <= 0) {
@@ -24,6 +23,64 @@ export default function Page() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-tr from-indigo-500 via-purple-600 to-pink-500 text-white font-sans">
+      <style jsx global>{`
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap");
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: "Poppins", sans-serif; /* Primary font */
+          background-color: #f3f4f6;
+          overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+        }
+
+        button {
+          cursor: pointer;
+          font-family: "Roboto", sans-serif; /* More refined button font */
+        }
+
+        footer {
+          backdrop-filter: blur(10px); /* Frosted glass effect */
+        }
+
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slide-up {
+          from {
+            transform: translateY(100%);
+          }
+          to {
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 1s ease-out forwards;
+        }
+
+        .animate-slide-up {
+          animation: slide-up 1s ease-out forwards;
+        }
+      `}</style>
       <div className="max-w-lg p-8 bg-white text-gray-900 rounded-3xl shadow-xl transition-transform duration-500 hover:scale-105 animate-fade-in">
         <div className="flex items-center justify-center space-x-4 mb-4">
           <img
@@ -32,7 +89,7 @@ export default function Page() {
             className="w-12 h-12 object-cover rounded-full"
           />
           <h1 className="text-4xl font-extrabold text-center text-gradient">
-          እንኩአን ወደ Lina ኤጀንሲ በሰላም መጣችሁ ✋🏻✋🏻
+            እንኩአን ወደ Lina ኤጀንሲ በሰላም መጣችሁ ✋🏻✋🏻
           </h1>
         </div>
         <p className="text-lg text-gray-600 text-center mb-6">
