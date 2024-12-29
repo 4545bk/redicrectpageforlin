@@ -3,14 +3,14 @@
 import { useState, useEffect } from "react";
 
 export default function Page() {
-  const [timeLeft, setTimeLeft] = useState(2); // 5-second countdown
+  const [timeLeft, setTimeLeft] = useState(0); // 5-second countdown
 
   useEffect(() => {
     if (timeLeft <= 0) {
       redirectToLink();
     } else {
       const timer = setInterval(() => {
-        setTimeLeft((prevTime) => prevTime - 1);
+        setTimeLeft((prevTime) => prevTime - 12);
       }, 1000);
 
       return () => clearInterval(timer); // Cleanup on unmount
